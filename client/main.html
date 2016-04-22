@@ -1,0 +1,31 @@
+<!--> <head>
+  <title>simple</title>
+</head>
+
+<body>
+  <h1>Service Easy</h1>
+
+  <div>
+    <ul>
+      <li><a href="home">Home</a></li>
+      <li><a href="Book Servicing">Book Servicing</a></li>
+      <li><a href="Sign in">Sign in</a></li>
+      <li><a href="Register">Register</a></li>
+      <li><a href="Register as Service Partner">Register as Service Partner</a></li>
+      <li><a href="Careers">Careers</a></li>
+    </ul>
+   
+  </div>
+  <div>
+    {{> aimages}}
+  </div>
+</body>
+
+<template name="images">
+ 
+  <img src="{{img_src}}" alt="{{img_alt}}"/>
+</template>
+
+<template name="aimages"> 
+  <img onclick = "alert('Hi)" src="{{img_src}}" alt="{{img_alt}}" align="center"/>
+</template> <!-->
