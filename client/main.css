@@ -90,7 +90,8 @@ li .text {
 }
 
 li.checked {
-  color: #888;
+  color: palevioletred;
+  font-size: 2px;
 }
 
 li.checked .text {

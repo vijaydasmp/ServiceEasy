@@ -23,3 +23,6 @@ twbs:bootstrap
 accounts-facebook
 servicelocale:googlemaps-api
 aldeed:simple-schema
+reactive-dict
+accounts-ui
+accounts-password
