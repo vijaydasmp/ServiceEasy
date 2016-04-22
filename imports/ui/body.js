@@ -2,14 +2,14 @@ import { Template } from 'meteor/templating';
  
 import { myCollection } from '../api/tasks.js';
  
+import './task.js';
+
 import './body.html';
  
 Template.body.helpers({
-  tasks: [
-     {text : 'This is Task 1'},
-     {text : 'This is Task 2'},
-     {text : 'This is Task 3'} 
-  ],
+  tasks() {
+    return myCollection.find({}, { sort: { createdAt: -1 }});
+  },
 });
 
 Template.body.events({
