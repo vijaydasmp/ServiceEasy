@@ -38,11 +38,13 @@ Template.body.events({
 
 
     // Insert a task into the collection
-    myCollection.insert({
+    /*myCollection.insert({
       text,
       createdAt: new Date(), // current time
-    });
-
+      owner: Meteor.userId(),
+      username: Meteor.user().username,
+    }); */
+    Meteor.call('myCollection.insert',text);
     // Clear form
     target.text.value = '';
   },

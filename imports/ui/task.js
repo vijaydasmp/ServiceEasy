@@ -10,8 +10,10 @@ Template.task.events({
     myCollection.update(this._id, {
       $set: { checked: ! this.checked },
     });
+    Meteor.call('myCollection.setChecked',this._id, !this.checked);
   },
   'click .delete'() {
-    myCollection.remove(this._id);
+    //myCollection.remove(this._id);
+    Meteor.call('myCollection.remove',this._id);
   },
 });
