@@ -1,7 +1,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>Todo List {{incompleteCount}}</h1>
+      <h1>Todo List </h1> <b> (Incomplete task count) = {{incompleteCount}} </b>
       <label class="hide-completed">
         <input type="checkbox" />
         Hide Completed Tasks
@@ -14,19 +14,8 @@
         </form>
       {{/if}}
     </header>
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
     <ul>
       {{#each tasks}} {{> task}} {{/each}}
     </ul>
   </div>
 </body>
-<!-->
-<template name="task">
-  <li>{{text}}</li>
-</template>
-<-->

@@ -16,4 +16,15 @@ Template.task.events({
     //myCollection.remove(this._id);
     Meteor.call('myCollection.remove',this._id);
   },
+  'click .toggle-private'() {
+    Meteor.call('myCollection.setPrivate', this._id, !this.private);
+  },
+
+});
+
+
+Template.task.helpers({
+  isOwner() {
+    return this.owner === Meteor.userId();
+  },
 });
