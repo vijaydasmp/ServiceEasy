@@ -7,8 +7,10 @@ import './task.js';
 
 import './body.html';
 
+
 Template.body.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();
+  Meteor.subscribe('myCollection');
 });
 
 Template.body.helpers({
