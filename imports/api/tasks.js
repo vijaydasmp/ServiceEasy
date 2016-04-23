@@ -36,7 +36,7 @@ Meteor.methods({
     check(myCollectionId, String);
  
     const myColl = myCollection.findOne(myCollectionId);
-    if (myColl.owner !== Meteor.userId()) {
+    if (myColl.owner !== this.userId()) {
       // make sure only the owner can delete it
       throw new Meteor.Error('not-authorized');
     }
@@ -48,7 +48,7 @@ Meteor.methods({
     check(setChecked, Boolean);
     
     const myColl = myCollection.findOne(myCollectionId);
-    if (myColl.private && myColl.owner !== Meteor.userId()) {
+    if (myColl.private && myColl.owner !== this.userId()) {
       // If the task is private, make sure only the owner can delete it
       throw new Meteor.Error('not-authorized');
     }

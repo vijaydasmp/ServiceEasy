@@ -26,6 +26,10 @@ Template.body.helpers({
   incompleteCount() {
     return myCollection.find({ checked: { $ne: true } }).count();
   },
+  
+  username() {
+    return this.userId().username;//Meteor.users.find({_id: this.userId},{fields: {'other': 1}});
+  }
 
 });
 
